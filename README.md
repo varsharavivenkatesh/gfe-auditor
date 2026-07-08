@@ -28,6 +28,15 @@ This tool automates that entire workflow.
 4. Results — eligibility verdict, per-provider breakdown with legal citations, filing deadline countdown
 5. PDF download — 4-page dispute packet generated in-browser, ready to submit to the federal portal
 
+<img width="476" height="579" alt="Screenshot 2026-07-07 201524" src="https://github.com/user-attachments/assets/59bb2278-f23e-4240-b1d8-847f014bfacb" />
+<img width="473" height="557" alt="Screenshot 2026-07-07 201744" src="https://github.com/user-attachments/assets/070d1f62-b769-4d26-ae21-648016606434" />
+<img width="477" height="596" alt="Screenshot 2026-07-07 201759" src="https://github.com/user-attachments/assets/63a9930d-fb55-419c-8e46-b27c6ded59be" />
+<img width="473" height="551" alt="Screenshot 2026-07-07 201813" src="https://github.com/user-attachments/assets/2953157e-aeb8-49d0-b9a0-252632cc16ad" />
+
+
+
+
+
 ---
 
 ## Why the per-provider distinction matters
