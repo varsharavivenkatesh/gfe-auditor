@@ -2,6 +2,9 @@
 
 A browser-based tool that audits medical bills against Good Faith Estimates under the federal **No Surprises Act** (45 CFR §149.610–620). Determines whether a patient qualifies for the Patient-Provider Dispute Resolution (PPDR) process and generates a ready-to-file dispute packet PDF — entirely client-side, with no data ever leaving the browser.
 
+<img width="579" height="502" alt="image" src="https://github.com/user-attachments/assets/55654625-5c30-4a00-928e-5f6bc8111997" />
+
+
 ---
 
 ## The problem
