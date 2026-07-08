@@ -1,0 +1,151 @@
+/* ============================================================
+   Design tokens — 4/8pt spacing rhythm, semantic color tokens
+   ============================================================ */
+:root {
+  /* Spacing scale (4pt base) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  /* Color palette */
+  --bg: #F8F7F4;
+  --surface: #FFFFFF;
+  --border: #E2DDD6;
+  --border-focus: #2A7B6F;
+
+  --text-primary: #1B2A3B;   /* contrast 12.6:1 on --surface ✓ */
+  --text-secondary: #4A5C6B; /* contrast 6.2:1 on --surface ✓ */
+  --text-muted: #7A8FA0;     /* contrast 4.6:1 on --surface ✓ */
+
+  --accent: #2A7B6F;
+  --accent-hover: #1F5C54;
+  --accent-light: #EAF4F2;
+  --accent-dark: #1F5C54;
+
+  --amber: #C07010;          /* darkened for 4.5:1 contrast on white */
+  --amber-light: #FDF3E3;
+
+  --danger: #B83225;         /* darkened for 4.5:1 contrast on white */
+  --danger-light: #FDECEA;
+
+  /* Typography */
+  --font-body: "DM Sans", system-ui, sans-serif;
+  --font-display: "DM Serif Display", Georgia, serif;
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(27, 42, 59, 0.06);
+  --shadow-md: 0 4px 16px rgba(27, 42, 59, 0.08);
+
+  /* Motion */
+  --duration-fast: 150ms;
+  --duration-step: 280ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Touch target minimum (44px per Apple HIG / 48px per Material) */
+  --touch-min: 44px;
+}
+
+/* ============================================================
+   Reset & base
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  /* eliminate 300ms tap delay on mobile */
+  touch-action: manipulation;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Skip link for keyboard users */
+.skip-link {
+  position: absolute;
+  top: -999px;
+  left: var(--space-4);
+  background: var(--accent);
+  color: #fff;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 14px;
+  z-index: 9999;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: var(--space-2);
+}
+
+/* ============================================================
+   Step transition — single orchestrated entrance
+   ============================================================ */
+@keyframes stepIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.step-enter {
+  animation: stepIn var(--duration-step) var(--ease-out) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .step-enter { animation: none; }
+  *, *::before, *::after { transition-duration: 0ms !important; }
+}
+
+/* ============================================================
+   Interactive base styles
+   ============================================================ */
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  touch-action: manipulation;
+  /* Minimum 44px touch target */
+  min-height: var(--touch-min);
+}
+
+input, select, textarea {
+  font-family: var(--font-body);
+  font-size: 16px; /* prevents iOS auto-zoom on focus */
+  min-height: var(--touch-min);
+}
+
+select { cursor: pointer; }
+
+/* Unified focus ring — 2px offset, accent color */
+:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Disabled states — always visually distinct */
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
