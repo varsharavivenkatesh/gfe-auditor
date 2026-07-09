@@ -32,6 +32,8 @@ This tool automates that entire workflow.
 <img width="473" height="557" alt="Screenshot 2026-07-07 201744" src="https://github.com/user-attachments/assets/070d1f62-b769-4d26-ae21-648016606434" />
 <img width="477" height="596" alt="Screenshot 2026-07-07 201759" src="https://github.com/user-attachments/assets/63a9930d-fb55-419c-8e46-b27c6ded59be" />
 <img width="473" height="551" alt="Screenshot 2026-07-07 201813" src="https://github.com/user-attachments/assets/2953157e-aeb8-49d0-b9a0-252632cc16ad" />
+<img width="607" height="481" alt="image" src="https://github.com/user-attachments/assets/2e1bbbea-d0e6-4bc3-93b5-bc6143d363ec" />
+
 
 
 
